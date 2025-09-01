@@ -1,27 +1,70 @@
-# pyproject.toml
+# ==============================================================================
+#  Arquivo de Configuração do Projeto Python (pyproject.toml)
+#  Este arquivo é o padrão moderno para definir metadados de projetos e
+#  configurações de build.
+# ==============================================================================
 
+# ------------------------------------------------------------------------------
+# Seção [build-system]: Define como o seu projeto é construído.
+# ------------------------------------------------------------------------------
+# Esta é a primeira seção que ferramentas como o `pip` leem para saber
+# quais pacotes são necessários para CONSTRUIR sua biblioteca.
 [build-system]
+# 'requires' lista as dependências de build. `setuptools` é a ferramenta
+# que vai empacotar sua biblioteca.
 requires = ["setuptools>=61.0"]
+
+# 'build-backend' especifica a função exata que o `pip` deve chamar
+# para iniciar o processo de construção do pacote.
 build-backend = "setuptools.build_meta"
 
+
+# ------------------------------------------------------------------------------
+# Seção [project]: Contém todos os metadados principais da sua biblioteca.
+# ------------------------------------------------------------------------------
+# Estas informações serão exibidas na página do PyPI e usadas pelo `pip`.
 [project]
+# O nome oficial do pacote, usado para a instalação (ex: `pip install db-nexus`).
 name = "db-nexus"
+
+# A versão atual do seu projeto. Siga o Versionamento Semântico (Major.Minor.Patch).
 version = "0.1.0"
+
+# A lista de autores do projeto no formato moderno.
 authors = [
   { name="Max Lemes", email="maxvlemes@gmail.com" },
 ]
+
+# Uma descrição curta e objetiva do que a biblioteca faz.
 description = "Uma biblioteca core para gerenciamento de sessão e repositórios com SQLAlchemy."
+
+# Aponta para o arquivo que contém a descrição longa do projeto (o que aparece na página do PyPI).
 readme = "README.md"
+
+# Especifica a versão mínima do Python com a qual sua biblioteca é compatível.
 requires-python = ">=3.8"
+
+# Classificadores padronizados que ajudam a categorizar seu projeto no PyPI,
+# facilitando a busca e a identificação.
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
+# Lista de dependências que serão instaladas JUNTO com a sua biblioteca.
+# Qualquer projeto que instalar o `db-nexus` também instalará `sqlalchemy>=2.0.0`.
 dependencies = [
     "sqlalchemy>=2.0.0",
 ]
 
+
+# ------------------------------------------------------------------------------
+# Seção [project.urls]: Links úteis que aparecerão na página do PyPI.
+# ------------------------------------------------------------------------------
 [project.urls]
+# Link para a página inicial do seu projeto.
 Homepage = "https://github.com/maxlemes/db-nexus"
+
+# Link direto para a aba de "Issues", onde usuários podem reportar bugs.
 Issues = "https://github.com/maxlemes/db-nexus/issues"
