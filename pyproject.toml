@@ -28,7 +28,7 @@ build-backend = "setuptools.build_meta"
 name = "db-nexus"
 
 # A versão atual do seu projeto. Siga o Versionamento Semântico (Major.Minor.Patch).
-version = "0.1.0"
+version = "0.2.0"
 
 # A lista de autores do projeto no formato moderno.
 authors = [
