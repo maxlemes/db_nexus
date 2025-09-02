@@ -14,7 +14,7 @@
 Você pode instalá-la diretamente do repositório do GitHub:
 
 ```bash
-pip install git+https://github.com/maxlemes/db-nexus.git
+pip install git+https://github.com/maxlemes/db_nexus.git
 ```
 
 Isso tornará o pacote `db_nexus` importável em outros projetos no mesmo ambiente. Se um dia a biblioteca for publicada no PyPI, a instalação seria `pip install db-nexus`.
