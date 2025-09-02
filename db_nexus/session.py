@@ -38,7 +38,7 @@ class DatabaseSessionManager:
         # com o banco. 'pool_pre_ping=True' é uma configuração de produção útil que
         # verifica se uma conexão do pool ainda está ativa antes de usá-la, evitando
         # erros em aplicações que ficam conectadas por muito tempo.
-        self._engine = create_engine(db_url, pool_pre_ping=True)
+        self._engine = create_engine(db_url, pool_pre_ping=True, connect_args={"timeout": 15})
         
         # 'sessionmaker' cria uma "fábrica de sessões". Em vez de configurar uma sessão
         # toda vez, nós configuramos esta fábrica uma vez, e depois apenas pedimos a ela
